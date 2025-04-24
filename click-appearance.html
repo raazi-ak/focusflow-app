@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Click Appearance Tab</title>
+</head>
+<body>
+  <script>
+    window.onload = function() {
+      // Redirect to settings page
+      window.location.href = 'http://localhost:3000/settings';
+      
+      // Wait for page to load and then click the Appearance tab
+      setTimeout(function() {
+        const appearanceTab = document.querySelector('button[value="appearance"]');
+        if (appearanceTab) {
+          appearanceTab.click();
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
