@@ -24,6 +24,9 @@ jobs:
         run: npm ci
 
       - name: Build the project
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # Pass the Gemini API key from GitHub Secrets
+          NEXT_PUBLIC_APP_URL: ${{ secrets.NEXT_PUBLIC_APP_URL }} # Pass the App URL from GitHub Secrets
         run: npm run build
 
       - name: Install Vercel CLI
